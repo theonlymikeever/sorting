@@ -1,6 +1,6 @@
 describe('Bubble Sort', function(){
-  before(function(){
-    spyOn(swap).and.callThrough();
+  beforeEach(function(){
+    spyOn(bubbleSort, 'swap').and.callThrough();
   });
 
   it('handles an empty array', function(){
@@ -17,7 +17,7 @@ describe('Bubble Sort', function(){
   });
   it('swap to have only been called a max of xx times', function(){
     bubbleSort([3, 7, 1, 4, 9]);
-    expect(swap.calls.count()).toBeLessThan(26);
+    expect(bubbleSort.swap.calls.count()).toBeLessThan(26);
   });
 
 });
